@@ -45,7 +45,7 @@ namespace text
         for (std::size_t off = str.find(origTxt);
             off != std::wstring::npos; off = str.find(origTxt, off))
         {
-            if ((off == 0 || str[off - 1] == L' ') &&
+            if ((off == 0 || str[off - 1] == L' ' || str[off - 1] == L'\n') &&
                 (str[off + origLen] == L' ' || str[off + origLen] == L'\0' ||
                 str[off + origLen] == L'.' || str[off + origLen] == L'!' ||
                 str[off + origLen] == L'?' || str[off + origLen] == L',' ||
